@@ -1,0 +1,30 @@
+<html>
+	<head>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase-messaging.js"></script>
+	<style>
+      #map {
+        height: 400px;
+        width: 50%;
+       }
+    </style>
+	</head>
+
+	<body onload = "initMap()">
+	<script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCaCRlJoJoo8eUMEH0lykgdSQfeRPN_yFg&callback=initMap">
+    </script>
+	<Script src="TestScript.js"></script>
+	
+	<h1 id="heading">Test</h1>
+	<div id = "map" onload = "getLocation()"></div>
+	
+	
+	</body>
+</html>
+
+
+ 
