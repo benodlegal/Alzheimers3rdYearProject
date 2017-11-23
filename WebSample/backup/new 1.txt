@@ -1,0 +1,69 @@
+
+ // Initialize Firebase
+ 
+ var lat=0;
+ var lng=0;
+ 
+  var config = {
+    apiKey: "AIzaSyCFIrC0pPcCmMtv3E67-G1dYN8GvZhHfgE",
+    authDomain: "alzheimers-project.firebaseapp.com",
+    databaseURL: "https://alzheimers-project.firebaseio.com",
+    projectId: "alzheimers-project",
+    storageBucket: "alzheimers-project.appspot.com",
+    messagingSenderId: "968345670861"
+  };
+  firebase.initializeApp(config);
+
+  // Get a reference to the database service
+  
+  const preObject = document.getElementById('object');
+  var dbRefObject = firebase.database().ref("Clients");
+  dbRefObject.on('value',gotData,errData);
+  //dbRefObject.on('value', snap => console.log(snap.val()));
+  
+  
+  
+  
+  
+  
+ 
+  function initMap() {
+      // getLocation();
+      
+        var uluru = {lat, lng};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 15,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+  
+  function getLocation(){
+	var ref = firebase.database().ref("Clients");
+    ref.on('value', gotData, errData);
+  }
+    
+
+function gotData(data){
+    var clients = data.val();
+    var keys = Object.keys(clients);
+    var k = keys[0];
+    lat = clients[k].Location.lat;
+    lng = clients[k].Location.lng;
+    lat = parseFloat(lat);
+    lng = parseFloat(lng);
+    console.log(lat,lng);
+    initMap();
+}
+
+function errData(err){
+    console.log("fuck");
+}
+   // add stuff to databse
+    /*var ref = firebase.database().ref();
+	var s = ref.child("Ayy").set("lmao");*/ 
+  
+  // maps api key AIzaSyCaCRlJoJoo8eUMEH0lykgdSQfeRPN_yFg

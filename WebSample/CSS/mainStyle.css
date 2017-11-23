@@ -1,0 +1,61 @@
+#map{
+    height: 400px;
+    width: 30%;
+	border-style:solid;
+	border-color:#99c0ff;
+	border-width:2px;
+	border-left-style:none;
+	border-top-style:none;
+	float:left;
+}
+
+#displayWelcome{
+	font-family:Arial;
+}
+
+#tictactoe{
+	float:right;
+}
+
+#updateFence{
+	float:right;
+}
+
+#logOut{
+	float:right;
+}
+
+#tabs{
+	float:left;
+	width:100%;
+	background-color:#99c0ff;
+}
+
+#page{
+	margin-left:15%;
+	margin-right:15%;
+	height:90%;
+	border-style:solid;
+	border-color:#99c0ff;
+}
+
+td{
+	font-family:Arial;
+	
+}
+
+p{
+	font-family:Arial;
+}
+
+.btn{
+	background-color: #99c0ff; 
+    border: none;
+    color: white;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+	font-family:Arial;
+}
